@@ -1,0 +1,7 @@
+states:q,qf
+variables:a,b,c
+start_state:q
+endsymbol:X
+delta:
+q:aLq bLq cRq qfRX
+qf:
