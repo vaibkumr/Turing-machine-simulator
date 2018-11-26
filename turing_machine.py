@@ -11,7 +11,7 @@ def is_comment(line):
     return False
 
 class Turing_machine:
-    def __init__(self, speed, tape_file, colors=['pink', 'purple'] ):
+    def __init__(self, tape_file, colors=['pink', 'purple'], speed = 0.1 ):
         self.tape_file = tape_file
         self.speed = speed
         self.colors = colors
@@ -82,7 +82,7 @@ class Turing_machine:
                          + str(self.speed))
 
     def isFinal(self, state):
-        if state in self.final_state:
+        if state == self.final_state:
             return True
         return False
 
@@ -137,6 +137,8 @@ class Turing_machine:
         self.write_tape(index, input, next_state, halted=True)
 
 if __name__ == "__main__":
-    tm = Turing_machine(0.1, "tape.txt",colors=['pink', 'red'])
+    tm = Turing_machine("tape.txt",colors=['pink', 'red'], speed = 0.1)
     tm.get_config("config.txt")
-    tm.run("aaaaaaa")
+    # tm.run("aaa") #This should get accepted
+    # tm.run("cacacac") #This should get accepted
+    tm.run("aaabaabbaaacabbsss") #This should get rejected
