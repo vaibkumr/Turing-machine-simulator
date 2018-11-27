@@ -1,7 +1,14 @@
+#Please don't use spaces anywhere other than for writing delta
+#Delta format: (tabular form)
+#|State | var1 | var2 | var3 .... |
+#|q1    | a1   | a2   |  a3 ..... |
+#|q2    | a4   | a5   |  a6 ..... |
+# actions (a) have syntax: [write symbol][Movement of head][next state]
 states:q,qf
+final_state:qf
 variables:a,b,c
 start_state:q
 endsymbol:X
 delta:
-q:aLq bLq cRq qfRX
+q:cRq bRq cRq XRqf
 qf:

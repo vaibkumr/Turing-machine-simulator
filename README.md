@@ -1,11 +1,16 @@
-# Turing machine simulator
-Python implementation of a turing machine simulator
+# Turing machine simulator (Universal Turing Machine)
+Python implementation of a Turing machine simulator
+
+## Status
+- Currently working fine for deterministic Turing machines
+- Non deterministic machine support with multiprocessing coming soon
+
 Planned features:
-- GUI
+- ~~Multiprocessing display and simulate~~
+- ~~GUI~~
 - Config menu
 - Sound?
 
 Challenges:
-- Non-deterministic turing machines with multi-threading
-- Halting problem of turing machine
-
+- Non-deterministic Turing machines with Multiprocessing
+- Halting problem of Turing machine
